@@ -167,7 +167,7 @@ def run_from_file(filename):
         sys.exit(1)
 
 
-if __name__ == "__main__":
+def main():
     parser = argparse.ArgumentParser(description="Create or destroy filesystem from a tree structure.")
     parser.add_argument('file', nargs='?', help="Text file containing tree structure")
     parser.add_argument('--destroy', metavar='DIR', help="Recursively delete the specified directory")
@@ -181,3 +181,7 @@ if __name__ == "__main__":
     else:
         app = App()
         app.mainloop()
+
+
+if __name__ == "__main__":
+    main()
