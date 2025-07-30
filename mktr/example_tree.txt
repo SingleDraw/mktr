@@ -1,0 +1,10 @@
+glsl-three-esbuild/
+├── public/
+│   └── index.html
+├── src/
+│   ├── main.js
+│   └── shaders/
+│       └── fragment.glsl
+├── dist/
+├── esbuild.config.js
+└── package.json

@@ -6,8 +6,10 @@ long_description = (this_directory / "README.md").read_text(encoding="utf-8")
 
 setup(
     name="mktr",
-    version="0.1.1",
-    description="Convert tree structure into actual folders/files via GUI",
+    version="0.1.2",
+    python_requires=">=3.6",
+    license="MIT",
+    description="Convert tree structure into actual folders/files via GUI or CLI",
     author="Kamil Małek",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -19,5 +21,12 @@ setup(
         ]
     },
     include_package_data=True,
-    install_requires=[]
+    install_requires=[
+        "customtkinter>=5.2.0",
+    ],
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent"
+    ]
 )
