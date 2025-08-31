@@ -22,10 +22,25 @@ def parse_tree(tree_str, base_path):
         line = line.rstrip()
         if not any(c in line for c in ('├', '└', '│', '─')) and '/' not in line and '.' not in line:
             continue
+
+        # Strip the line of comments
+        line = line.split('#', 1)[0]
+
+        # Strip the line of whitespace
+        line = line.strip()
+
+        # Strip the line of tree markers and calculate indentation
         stripped = line.lstrip('│├└─ ')
+
+        # Calculate indentation level
         indent = (len(line) - len(stripped)) // 4
+
+        # Determine if the line represents a directory or a file
         is_dir = stripped.endswith('/')
+
+        # Get the name without the trailing slash
         name = stripped.rstrip('/')
+
         if not name or any(char in name for char in '*<>?"|'):
             continue
         while len(path_stack) > indent:

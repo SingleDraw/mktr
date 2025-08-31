@@ -8,8 +8,8 @@ on:
 # Tag your releases with 'v' prefix to trigger this workflow
 # This workflow builds and publishes the package to PyPI when a new version is tagged.
 # Example command to create a tag:
-# git tag v0.1.0
-# git push origin v0.1.0
+# git tag v0.1.2
+# git push origin v0.1.2
 
 jobs:
   publish:
